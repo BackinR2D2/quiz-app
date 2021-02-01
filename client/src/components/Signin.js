@@ -16,13 +16,14 @@ function Signin() {
             setIsLoggedIn(true);
             localStorage.setItem('auth', data.token);
             history.push('/');
-        } catch (_) {
-            handleError();
+        } catch (e) {
+            handleError(e);
         }
     }
 
-    const handleError = () => {
+    const handleError = (e) => {
         // TODO: HANDLE ERROR WITH SWAL
+        console.log(e);
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
