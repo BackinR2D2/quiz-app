@@ -13,7 +13,6 @@ router.get('/account', auth, async (req, res) => {
             userHistory: userHistory.rows,
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",
@@ -31,7 +30,6 @@ router.put('/update-username', auth, async (req, res) => {
             updatedUsername: updateUsername.rows[0]
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",
@@ -48,7 +46,6 @@ router.delete('/delete-account', auth, async (req, res) => {
             status: 1,
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",

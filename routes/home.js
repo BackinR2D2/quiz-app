@@ -9,7 +9,6 @@ router.get('/verify', auth, (req, res) => {
             status: 1,
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",
@@ -26,7 +25,6 @@ router.post('/game', /*auth*/ async (req, res) => {
             status: 1,
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",
@@ -48,7 +46,6 @@ router.put('/update-score', auth, async (req, res) => {
             message: 'Updated',
         })
     } catch (error) {
-        console.log(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",
