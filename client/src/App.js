@@ -1,22 +1,34 @@
 import './App.css';
-import { GoogleLogin } from 'react-google-login';
+import Home from './components/Home';
+import Auth from './components/auth/Auth';
+import Account from './components/Account';
+import NavBar from './components/static/Navbar';
+import Leaderboard from './components/Leaderboard';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
 
-  const responseGoogle = (response) => {
-    console.log(response);
-  }
-
   return (
-    <div className="App">
-      <GoogleLogin
-        clientId="811500721671-j3ucp4m1iskpve2je2244fa9v4iibs57.apps.googleusercontent.com"
-        buttonText="Login"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-      // cookiePolicy={'single_host_origin'}
-      />
-    </div>
+    <>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/account">
+            <Auth Component={Account} />
+          </Route>
+          <Route path="/leaderboard">
+            <Leaderboard />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

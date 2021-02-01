@@ -1,38 +1,200 @@
-.App {
+.main {
+  text-align: center;
+  margin-top: 8vh;
+}
+
+.tcenter {
+  text-align: center;
+  padding: 8px;
+}
+
+.mt18vh {
+  text-align: center;
+  margin-top: 18vh;
+}
+
+.mt14vh {
+  text-align: center;
+  margin-top: 14vh;
+}
+
+.centerSection {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userImg {
+  /* border: 1px solid #363636!important; */
+  border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.centerComponent {
+  margin-top: 6vh;
+  height: 70vh;
+}
+
+.question {
+  text-align: center;
+  margin-bottom: 12px;
+  
+}
+
+.timer {
+  display: block;
+  margin: 0 auto;
+  font-size: 25px;
+  width: 140px;
+  background: #f5f6f7;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+h5 {
+  font-weight: 100 !important;
+  margin-bottom: .2rem !important;
+}
+
+.cr {
+  color: red;
+}
+
+.spanTimer {
+  margin-left: 6px;
+  font-size: 22px; 
+}
+
+.mb4vh {
+  margin-bottom: 4vh;
+}
+
+.stats {
+  /* margin-top: -8vh; */
+  padding: 24px;
+}
+
+.buttonSection {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.table th {
+  vertical-align: middle !important;
+}
+
+.table td {
+  vertical-align: middle !important;
+}
+
+.questionNumber {
+  margin-top: 48px;
+    margin-bottom: 4px;
+}
+
+.number {
+  letter-spacing: 0px !important;
+  color: #343A40 !important;
+  text-transform: uppercase !important;
+  opacity: 0.8 !important;
+  font-size: 14px;
+}
+
+.hquestion {
+  text-align: center;
+  /* width: 72vw; */
+  height: 100%;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: 700 !important;
+  margin-bottom: 32px !important;
+}
+
+.answerBtn {
+  width: 60vw;
+  border-radius: 12px !important;
+  font-size: 19px !important;
+  padding: 16px !important;
+}
+
+@media (max-width: 516px) {
+  .cr {
+    font-size: 16px;
+  }
+}
+
+.tleft {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: -2px !important;
+}
+
+.card-title {
+  margin-bottom: .75rem !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: #808588 !important;
+}
+
+.col {
+  padding: 26px;
+}
+
+.userData {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.userInfo {
+  border: 1px solid rgba(54,54,54,0.2)!important;
+  border-radius: 12%;
+  background: rgba(214,207,199, 0.6);
+}
+
+.accountImg {
+  border: 1px solid #363636!important;
+}
+
+.MuiFab-root {
+  width: 24px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  padding: 14px !important;
+}
+
+.updateBtn { 
+  margin-left: 8px;
+}
+
+.btngroup {
+  margin-top: 10px !important;
+}
+
+.usernameSection {
+  height: 6em;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.mr4px {
+  margin-right: 10px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules {
+  text-align: center;
+  margin-top: 4vh;
 }
