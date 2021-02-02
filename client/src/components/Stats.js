@@ -99,10 +99,10 @@ function Stats({ data, playerAnswers, rightAnswers, auth, restart }) {
                                         Correct answer <strong style={{ color: 'green' }}>{he.decode(el.correct_answer)}</strong>
                                     </p>
                                     <p className="card-text">
-                                        Player's answer {answers[i].userAnswer === 'not provided' ? <strong>has not been provided for this question.</strong> : <strong style={{ color: answers[i].userAnswer === he.decode(el.correct_answer) ? 'green' : 'red' }}>{answers[i].userAnswer}</strong>}
+                                        Player's answer {answers[i].userAnswer === 'not provided' ? <strong>has not been provided for this question.</strong> : <strong style={{ color: (answers[i].userAnswer).trim() === he.decode(el.correct_answer).trim() ? 'green' : 'red' }}>{answers[i].userAnswer}</strong>}
                                     </p>
                                     {
-                                        answers[i].userAnswer === he.decode(el.correct_answer) ?
+                                        (answers[i].userAnswer).trim() === he.decode(el.correct_answer).trim() ?
                                             <p className="card-text">
                                                 +{el.difficulty === 'easy' ? 5 : el.difficulty === 'medium' ? 10 : 15}
                                             </p>
