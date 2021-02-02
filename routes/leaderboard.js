@@ -9,7 +9,6 @@ router.get('/leaderboard', async (_, res) => {
             userInfo: userData.rows,
         })
     } catch (error) {
-        console.error(error);
         res.status(500).json({
             status: 0,
             messsage: "some error occured... Try again.",
