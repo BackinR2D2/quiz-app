@@ -23,7 +23,6 @@ function Signin() {
 
     const handleError = (e) => {
         // TODO: HANDLE ERROR WITH SWAL
-        console.log(e);
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
