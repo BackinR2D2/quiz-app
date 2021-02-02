@@ -23,11 +23,15 @@ function Signin() {
 
     const handleError = (e) => {
         // TODO: HANDLE ERROR WITH SWAL
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong! Try again.',
-        })
+        if (e.error === 'popup_closed_by_user') {
+            return;
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong! Try again.',
+            })
+        }
     }
 
     return (
