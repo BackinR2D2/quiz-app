@@ -90,16 +90,16 @@ function Stats({ data, playerAnswers, rightAnswers, auth, restart }) {
                                 <div className="card-body">
                                     <h5 className="card-title">{he.decode(el.question)}</h5>
                                     <p className="card-text">
-                                        Question difficulty <strong>{el.difficulty}</strong>
+                                        Question difficulty {el.difficulty}
                                     </p>
                                     <p className="card-text">
-                                        Question category <strong>{he.decode(el.category)}</strong>
+                                        {he.decode(el.category)}
                                     </p>
                                     <p className="card-text">
-                                        Correct answer <strong>{he.decode(el.correct_answer)}</strong>
+                                        Correct answer <strong style={{ color: 'green' }}>{he.decode(el.correct_answer)}</strong>
                                     </p>
                                     <p className="card-text">
-                                        Player's answer {answers[i].userAnswer === 'not provided' ? <strong>has not been provided for this question.</strong> : <strong style={{ color: answers[i].userAnswer === he.decode(el.correct_answer) ? 'green' : 'black' }}>{answers[i].userAnswer}</strong>}
+                                        Player's answer {answers[i].userAnswer === 'not provided' ? <strong>has not been provided for this question.</strong> : <strong style={{ color: answers[i].userAnswer === he.decode(el.correct_answer) ? 'green' : 'red' }}>{answers[i].userAnswer}</strong>}
                                     </p>
                                     {
                                         answers[i].userAnswer === he.decode(el.correct_answer) ?
