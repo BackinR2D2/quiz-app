@@ -23,7 +23,7 @@ app.use(account);
 app.use(home);
 app.use(leaderboard);
 
-app.get('*', (_, res) => {
+app.get('/*', (_, res) => {
     res.sendFile(path.join(__dirname, 'client/build/index.html'));
 })
 
