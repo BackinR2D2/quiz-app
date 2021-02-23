@@ -11,8 +11,8 @@ function Leaderboard() {
         const getData = async () => {
             try {
                 const { data } = await axios.get(`${config.url}/leaderboard`);
-                setIsLoading(false);
                 setUserData(data.userInfo);
+                setIsLoading(false);
             } catch (error) {
                 Swal.fire({
                     icon: 'error',
