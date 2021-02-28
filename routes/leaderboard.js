@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const db = require('../db/index');
 
-router.get('/leaderboard', async (_, res) => {
+router.get('/api/leaderboard', async (_, res) => {
     try {
         const userData = await db.query('SELECT username, score, img FROM users ORDER BY score DESC LIMIT 10;');
         res.json({

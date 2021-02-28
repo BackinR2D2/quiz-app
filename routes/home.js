@@ -3,7 +3,7 @@ const auth = require('./auth');
 const axios = require('axios');
 const db = require('../db/index');
 
-router.get('/verify', auth, (req, res) => {
+router.get('/api/verify', auth, (req, res) => {
     try {
         res.status(200).json({
             status: 1,
@@ -16,7 +16,7 @@ router.get('/verify', auth, (req, res) => {
     }
 })
 
-router.post('/game', /*auth*/ async (req, res) => {
+router.post('/api/game', async (req, res) => {
     try {
         const { category, difficulty, type } = req.body;
         const getGameData = await axios.get(`https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=${type}`);
@@ -32,7 +32,7 @@ router.post('/game', /*auth*/ async (req, res) => {
     }
 })
 
-router.put('/update-score', auth, async (req, res) => {
+router.put('/api/update-score', auth, async (req, res) => {
     try {
         const id = req.user;
         const { score, rightAnswers } = req.body;

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const auth = require('./auth');
 const db = require('../db/index');
 
-router.get('/account', auth, async (req, res) => {
+router.get('/api/account', auth, async (req, res) => {
     try {
         const uid = req.user;
         const userInfo = await db.query("SELECT username, email, score, img, timestamp FROM users WHERE id = $1", [uid]);
@@ -20,7 +20,7 @@ router.get('/account', auth, async (req, res) => {
     }
 })
 
-router.put('/update-username', auth, async (req, res) => {
+router.put('/api/update-username', auth, async (req, res) => {
     try {
         const id = req.user;
         const { newUsername } = req.body;
@@ -37,7 +37,7 @@ router.put('/update-username', auth, async (req, res) => {
     }
 })
 
-router.delete('/delete-account', auth, async (req, res) => {
+router.delete('/api/delete-account', auth, async (req, res) => {
     try {
         const id = req.user;
         const deleteHistory = await db.query('DELETE FROM history WHERE userid = $1', [id]);

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const db = require('../db/index');
 
-router.post('/signin', async (req, res) => {
+router.post('/api/signin', async (req, res) => {
     try {
         const { response: { profileObj, tokenObj } } = req.body;
         const checkUser = await db.query("SELECT id FROM users WHERE ID = $1", [profileObj.googleId]);
