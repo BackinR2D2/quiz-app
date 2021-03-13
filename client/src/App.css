@@ -202,3 +202,10 @@ h5 {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.centerApp {
+  height: 90.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
