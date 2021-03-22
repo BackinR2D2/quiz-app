@@ -3,6 +3,19 @@ const auth = require('./auth');
 const axios = require('axios');
 const db = require('../db/index');
 
+router.get('/api/verify', auth, (req, res) => {
+    try {
+        res.status(200).json({
+            status: 1,
+        })
+    } catch (error) {
+        res.status(500).json({
+            status: 0,
+            messsage: "some error occured... Try again.",
+        })
+    }
+})
+
 router.post('/api/game', async (req, res) => {
     try {
         const { category, difficulty, type } = req.body;
