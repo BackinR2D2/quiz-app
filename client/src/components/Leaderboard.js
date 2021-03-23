@@ -14,7 +14,6 @@ function Leaderboard() {
                 setUserData(data.userInfo);
                 setIsLoading(false);
             } catch (error) {
-                console.log(error);
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
