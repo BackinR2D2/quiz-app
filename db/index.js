@@ -15,10 +15,9 @@ const options = {
 
 const productionOption = {
     connectionString: process.env.DATABASE_URL,
-    ssl: true,
-    // ssl: {
-    //     rejectUnauthorized: false
-    // }
+    ssl: {
+        rejectUnauthorized: false
+    }
 }
 
 const pool = new Pool(process.env.NODE_ENV === 'production' ? productionOption : options);
