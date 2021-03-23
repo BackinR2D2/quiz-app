@@ -21,7 +21,7 @@ router.post('/api/signin', async (req, res) => {
     } catch (error) {
         res.status(500).json({
             status: 0,
-            messsage: `some error occured... Try again. ${error}`,
+            messsage: `some error occured... Try again.`,
         })
     }
 })
