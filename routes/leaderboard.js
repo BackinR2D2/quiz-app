@@ -11,7 +11,7 @@ router.get('/api/leaderboard', async (_, res) => {
     } catch (error) {
         res.status(500).json({
             status: 0,
-            messsage: "some error occured... Try again.",
+            messsage: `some error occured... Try again. ${error}`,
         })
     }
 })
