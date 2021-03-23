@@ -23,6 +23,7 @@ function Signin() {
 
     const handleError = (e) => {
         // TODO: HANDLE ERROR WITH SWAL
+        console.log(e);
         if (e.error === 'popup_closed_by_user') {
             return;
         } else {
